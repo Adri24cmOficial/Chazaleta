@@ -12,39 +12,67 @@
     --texto-color-primario: #ffffff;
 }
 
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 header{
     height: var(--altura-header);
     background-color: var(--color-primario);
     position: relative;
-    
-    .degradado{
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
-    }
-    .bienvenida{
-        position: absolute;
-        left: 3%;
-        bottom: 70px;
-        padding: 1em 0;
-        font-family: var(--fuente-titulos);
-        color: var(--texto-color-primario);
-    }
-    .buscador{
-        position: absolute;
-        bottom: -37.5px; /* para que el buscador quede a la mitad del header*/
-        left: 10%;
-        height: 5em;
-        width: 80%;
-        margin: auto; /* centra el buscador horizontalmente*/
-        background-color: white;
-    }
-    .ubi{
-        height: 50%;
-        width: 50%;
-    }
 }
+.degradado{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+}
+.bienvenida{
+    position: absolute;
+    left: 3%;
+    bottom: 70px;
+    padding: 1em 0;
+    font-family: var(--fuente-titulos);
+    color: var(--texto-color-primario);
+}
+.cuadrado-boton{
+    height: 50px;
+    width: 50px;
+    background-color: green;
+}
+.ubi{
+    height: 50%;
+    width: 50%;
+}
+.buscador{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -37.5px; /* para que el buscador quede a la mitad del header*/
+    left: 10%;
+    box-shadow: 0 26px -3px rgba(0,0,0,0.5);
+    height: 50px;
+    width: 80%;
+    margin: auto; /* centra el buscador horizontalmente*/
+    background-color: white;
+}
+.buscador input[type="text"]{
+    height: 100%;
+    outline: none;
+    flex: 1;
+    padding: 1em;
+    border: none;
+}
+
 main{
     min-height: calc(100dvh - var(--altura-header));
     background-color: var(--color-secundario);
+    color: var(--texto-color-secundario);
+}
+
+.categorias{
+    height: 100px;
+    padding-top: 25px;
+    background-color: blue;
 }
